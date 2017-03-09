@@ -1,3 +1,16 @@
+* {
+  background-color: #222;
+}
+
+h2 {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  font-family: Arial;
+  font-size: 83px;
+  margin: 0px 0px 60px 0px;
+}
+
 .App {
   text-align: center;
 }
@@ -11,11 +24,30 @@
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: floralwhite;
 }
 
 .App-intro {
   font-size: large;
+}
+
+#start_button {
+  height: 100px;
+  width: 13%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  border-radius: 3%;
+  background-color: #880E4F;
+  color: floralwhite;
+  font-size: 65px;
+  font-family: Arial;
+}
+
+#message {
+
+  font-size: 70px;
+  font-family: Arial;
+  color: #757575;
 }
 
 @keyframes App-logo-spin {

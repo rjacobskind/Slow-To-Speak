@@ -24,7 +24,7 @@ export const startButton = (event) => {
     document.getElementById('message').innerHTML = "Slow Down";
 
     setTimeout(() => {
-      document.getElementById('message').innerHTML = "You are speaking at a good rate"
+      document.getElementById('message').innerHTML = "You are so well-spoken!"
     }, 2000);
 
   }

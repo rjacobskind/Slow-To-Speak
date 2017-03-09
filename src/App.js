@@ -8,11 +8,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Speech Rate Analyzer</h2>
+          <h2>Speech Speed Analyzer</h2>
         </div>
         <div className="main-body">
           <button id="start_button" onClick={(event) => startButton(event)}>Start!</button>
-          <div id="message">You are speaking at a good rate</div>
+          <div id="message">Speak!</div>
         </div>
       </div>
     );
