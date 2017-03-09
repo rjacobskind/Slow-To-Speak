@@ -14,25 +14,20 @@ export const startButton = (event) => {
       }
 }
 
-export const onstart = recognition.onstart = () => {
-    //Listening (capturing voice from audio input) started.
-    //This is a good place to give the user visual feedback about that (i.e. flash a red light, etc.)
-};
-
-export const onresult = recognition.onresult = (event) => {
+  recognition.onresult = (event) => {
   let length = event.results[event.results.length - 1][0].transcript.split(' ').length;
 
-  //let phrase = event.results[0][0].replace('-', ' ');
-  //let length = phrase.split(' ').length;
   console.log(event.results[event.results.length - 1][0].transcript);
   console.log("length", length);
 
   if(length > 5){
-   setTimeout(App.getElementById('message').innerHTML = "Slow Down");
+    document.getElementById('message').innerHTML = "Slow Down";
+
+    setTimeout(() => {
+      document.getElementById('message').innerHTML = "You are speaking at a good rate"
+    }, 2000);
+
   }
 
 }
 
-export const onend = recognition.onend = () => {
-    //Again – give the user feedback that you are not listening anymore. If you wish to achieve continuous recognition – you can write a script to start the recognizer again here.
-};
