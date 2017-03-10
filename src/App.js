@@ -9,6 +9,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h2>Slow To Speak</h2>
+          <h4>Click "Start" below to begin your voice analysis</h4>
         </div>
         <div className="main-body">
             <button id="start_button" onClick={(event) => startButton(event)}>Start!</button>

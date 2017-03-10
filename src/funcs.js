@@ -1,5 +1,5 @@
 import recognition from './audio';
-import App from './App';
+//import App from './App';
 
 var recognizing = true;
 let count = 0; //to be used to grab every nth result to analyze
