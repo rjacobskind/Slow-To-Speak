@@ -8,13 +8,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Slow Your Speech</h2>
+          <h2>Slow To Speak</h2>
         </div>
         <div className="main-body">
-          <div>
             <button id="start_button" onClick={(event) => startButton(event)}>Start!</button>
             <div id="circle" display="none"></div>
-          </div>
           <div id="message"></div>
         </div>
       </div>

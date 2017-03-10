@@ -1,8 +1,4 @@
 
-// if (!('webkitSpeechRecognition' in window)) {
-//     upgrade();
-// } else {
-    //start_button.style.display = 'inline-block';
     var recognition = new window.webkitSpeechRecognition();
     recognition.continuous = true;
     recognition.interimResults = true;
