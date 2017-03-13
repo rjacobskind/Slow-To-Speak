@@ -1,9 +1,6 @@
 {
   "name": "speech-analyzer",
   "version": "0.1.0",
-  "engines": {
-    "npm": "3.10.8"
-  },
   "private": true,
   "dependencies": {
     "jquery": "^3.1.1",
