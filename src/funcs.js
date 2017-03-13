@@ -24,30 +24,12 @@ export const startButton = (event) => {
 recognition.onresult = (event) => {
   //isFinal is a boolean that lets us known whether the given result is the final version or not
   let isFinal = event.results[event.results.length -1].isFinal;
+  if(!isFinal) { return; }
 
   //length is the # of words found in a given result
   let length = event.results[event.results.length - 1][0].transcript.split(' ').length - 1;
-
- // console.log(event.results[event.results.length - 1][0].transcript);
-
-//this 'if' statement takes out outliers and final results (which are repeats of words already spoken)
-  if (!isFinal && length < 13) {
-    count === 5 ? count = 1 : count++;
-    count === 1 ? totalLength = 0 : totalLength;
-    if (count <= 5){
-      totalLength += length;
-    }
-  }
-
-if(count === 5) { console.log(totalLength); }
-
-  function generateMessage(message){
-      document.getElementById('message').innerHTML = message;
-  }
-
-  if (count === 5 && !isFinal) {
-    if ((totalLength/5) > 4.5) generateMessage("Slow Down");
-
-    else generateMessage("You are so well-spoken!");
-  }
+  let message;
+  if(length < 30) { message = "You are so well spoken!"; }
+  else { message = "Slow down!"; }
+  document.getElementById('message').innerHTML = message;
 }
