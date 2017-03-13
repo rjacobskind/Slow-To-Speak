@@ -14,7 +14,7 @@ class App extends Component {
         <div className="main-body">
             <button id="start_button" onClick={(event) => startButton(event)}>Start!</button>
             <div id="circle" display="none"></div>
-          <div id="message"></div>
+            <div id="message"></div>
         </div>
       </div>
     );
