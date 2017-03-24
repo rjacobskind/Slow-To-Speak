@@ -1,5 +1,4 @@
 import recognition from './audio';
-//import App from './App';
 
 let recognizing = true,
 starter,
@@ -26,9 +25,8 @@ export const startButton = (event) => {
 recognition.onresult = (event) => {
   //isFinal is a boolean that lets us know whether the given result is the final version or not
   let isFinal = event.results[event.results.length -1].isFinal;
+  console.log(event.results[event.results.length - 1][0].transcript);
   if(!isFinal) { return; }
-
-console.log(event.results[event.results.length - 1][0].transcript);
 
   //length is the # of words found in a given result
   let length = event.results[event.results.length - 1][0].transcript.split(' ').length - 1;
